@@ -16,10 +16,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls')),
-    path('users/<int:pk>/update/', UserViewSet.as_view({'put': 'update'})),
-    path('users/<int:pk>/delete/', UserViewSet.as_view({'delete': 'delete'})),
-
 
 ]
-
-urlpatterns += router.urls
